@@ -52,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
 class GroupLoadedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final groupChatBloc = BlocProvider.of<GroupChatBloc>(context);
 
     return Expanded(
