@@ -96,7 +96,7 @@ class GroupChatBloc extends Bloc<GroupChatEvent, GroupChatState> {
     for (int i = 0; i < 100; i++) {
       groupChats.add("Group Message #$i");
     }
-    showKeyboard();
+//    showKeyboard();
   }
 
   @override

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import io.flutter.embedding.android.FlutterFragment
-import io.flutter.embedding.android.FlutterView
+import io.flutter.embedding.android.TransparencyMode
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         mFlutterFragment = mFragmentManager.findFragmentByTag(FLUTTER_FRAGMENT) as FlutterFragment?
         if (mFlutterFragment == null) {
             mFlutterFragment =
-                FlutterFragment.withCachedEngine("FLUTTER_ENGINE").transparencyMode(FlutterView.TransparencyMode.transparent).build()
+                FlutterFragment.withCachedEngine("FLUTTER_ENGINE").transparencyMode(TransparencyMode.opaque).build()
         }
 
         button_1.setOnClickListener {
